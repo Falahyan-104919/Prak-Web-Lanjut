@@ -6,7 +6,7 @@
     <div class="col-md-6">
         <form action="" method="get">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Cari Postingan"  aria-label="Recipient's username" aria-describedby="button-addon2">>
+                <input type="text" class="form-control" placeholder="Cari Postingan"  aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary-secondary" type="button" id="button-addon2">Cari</button> 
             </div>
         </form>
