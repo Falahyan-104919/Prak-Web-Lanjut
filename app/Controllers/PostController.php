@@ -6,7 +6,7 @@ class PostController extends BaseController
 {
     public function index()
     {
-        $data = ["title"=>"blogs apps | post"];
+        $data = ["title"=>"Blogs App | Post"];
         echo view('layout/header', $data);
         echo view('layout/navbar');
         echo view('v_post');
