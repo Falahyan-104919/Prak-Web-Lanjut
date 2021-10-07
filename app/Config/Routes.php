@@ -43,6 +43,8 @@ $routes->get('/', function(){
         echo view('layout/footer');
 });
 $routes->get('/admin', 'Templating::index');
+$routes->get('/register', 'Templating::register');
+$routes->get('/saveRegister', 'Templating::saveRegister');
 $routes->get('/', 'Home::index');
 $routes->get('/about', function(){
     $data = ["title"=>"blogs apps | about"];

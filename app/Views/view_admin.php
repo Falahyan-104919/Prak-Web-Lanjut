@@ -2,7 +2,7 @@
 <?=  $this->extend('template');  ?>
 <?=  $this->section('content');  ?>
 
-
+<body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
