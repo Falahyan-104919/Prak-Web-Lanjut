@@ -74,6 +74,14 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
+      <div class="container-fluid mt-2">
+          <div class="card p-1">
+              <div class="d-flex align-end">
+                  <a href="/admin/posts/create" class="btn btn-primary">
+                  <i class="fas fa-plus"></i> Tambah Data</a>
+              </div>
+          </div>
+      </div>
     </div>
     <!-- /.content-header -->
 

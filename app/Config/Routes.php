@@ -42,7 +42,6 @@ $routes->get('/', function(){
         echo view('v_home');
         echo view('layout/footer');
 });
-$routes->get('/admin', 'Templating::index');
 $routes->get('/register', 'Templating::register');
 $routes->get('/saveRegister', 'Templating::saveRegister');
 $routes->get('/', 'Home::index');
@@ -55,8 +54,13 @@ $routes->get('/about', function(){
 });
 $routes->get('/post', 'PostController::index');
 
+$routes->get('/admin', 'Templating::index');
+$routes->get('/admin/posts', 'AdminPostController::index');
+$routes->get('/admin/posts/create', 'AdminPostController::create');
+$routes->post('/admin/posts/store', 'AdminPostController::store');
+
 /*
- * --------------------------------------------------------------------
+* --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
  *

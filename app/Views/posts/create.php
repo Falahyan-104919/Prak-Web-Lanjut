@@ -70,10 +70,50 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Create Post</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
+      <div class="container-fluid mt-2">
+        <div class="card p-2">
+                    <div class="card-header text-center">
+                        <strong>Form Tambah Post</strong>
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/posts/store" method="POST">
+                        <div class="row">
+                            <div class="col-md-4 p3">
+                                <div class="form-group">
+                                    <label for="judul">Judul Posts</label>
+                                    <input type="text" class="form-control" id="judul" name="judul">
+                                </div>
+                                <div class="form-group">
+                                    <label for="desc">Slug</label>
+                                    <input type="text" class="form-control" id="slug" name="judul">
+                                </div>
+                                <div class="form-group">
+                                    <label for="kategori">Kategori Posts</label>
+                                    <input type="text" class="form-control" id="kategori" name="judul">
+                                </div>
+                                <div class="form-group">
+                                    <label for="author">Author Posts</label>
+                                    <input type="text" class="form-control" id="author" name="author">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="desc">Deskripsi Postingan </label>
+                                <br>
+                                <textarea name="desc" id="desc" cols="15" rows="30"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit
+                            </button>
+                        </form>
+                        </div>
+                    </div>
+        </div>
+        </div>
     </div>
     <!-- /.content-header -->
 
@@ -96,3 +136,9 @@
 <!-- ./wrapper -->
 
 <?= $this-> endSection();?>
+
+<?= $this-> section('myscript');?>
+<script>
+    $('#desc').summernote()
+</script>
+<?= $this->endSection();?>
