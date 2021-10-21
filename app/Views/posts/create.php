@@ -85,25 +85,50 @@
                             <div class="col-md-4 p3">
                                 <div class="form-group">
                                     <label for="judul">Judul Posts</label>
-                                    <input type="text" class="form-control" id="judul" name="judul">
+                                    <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : '' ;?>" id="judul" name="judul"> 
+                                    <?php if ($validation -> hasError('judul')) : ?>
+                                    <div class="invalid-feedback">
+                                      <?= $validation->getError('judul'); ?>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="form-group">
-                                    <label for="desc">Slug</label>
-                                    <input type="text" class="form-control" id="slug" name="judul">
+                                    <label for="slug">Slug</label>
+                                    <input type="text" class="form-control <?= ($validation->hasError('slug')) ? 'is-invalid' : '' ;?>" id="slug" name="slug"> 
+                                    <?php if ($validation -> hasError('slug')) : ?>
+                                    <div class="invalid-feedback">
+                                      <?= $validation->getError('slug'); ?>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="kategori">Kategori Posts</label>
-                                    <input type="text" class="form-control" id="kategori" name="judul">
+                                    <input type="text" class="form-control <?= ($validation->hasError('author')) ? 'is-invalid' : '' ;?>" id="kategori" name="kategori">
+                                    <?php if ($validation -> hasError('kategori')) : ?>
+                                    <div class="invalid-feedback">
+                                      <?= $validation->getError('kategori'); ?>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="author">Author Posts</label>
-                                    <input type="text" class="form-control" id="author" name="author">
+                                    <input type="text" class="form-control <?= ($validation->hasError('author')) ? 'is-invalid' : '' ;?>" id="author" name="author">
+                                    <?php if ($validation -> hasError('author')) : ?>
+                                    <div class="invalid-feedback">
+                                      <?= $validation->getError('author'); ?>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-md-8">
                                 <label for="desc">Deskripsi Postingan </label>
                                 <br>
-                                <textarea name="desc" id="desc" cols="15" rows="30"></textarea>
+                                <textarea name="desc" class="form-control <?= ($validation->hasError('author')) ? 'is-invalid' : '' ;?>" id="desc" cols="15" rows="30"></textarea> 
+                                <?php if ($validation -> hasError('desc')) : ?>
+                                    <div class="invalid-feedback">
+                                      <?= $validation->getError('desc'); ?>
+                                    </div>
+                                    <?php endif; ?>
                             </div>
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i>

@@ -26,7 +26,7 @@ class Templating extends BaseController{
         $data = [
             'title' => "Register",
         ];
-        return view('v_register', $data);
+        return view('v_register');
     }
 
     public function saveRegister(){
@@ -38,7 +38,7 @@ class Templating extends BaseController{
         ];
 
         $this->userModel->insert($data);
-        return redirect()->to('/register');
+        return redirect()->to('register');
 
     }
 }
