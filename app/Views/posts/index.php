@@ -41,7 +41,7 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item menu-open">
+          <li class="nav-item">
             <a href="/admin" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="/admin/posts" class="nav-link">
+            <a href="/admin/posts" class="nav-link active">
               <i class="nav-icon fas fa-book-open"></i>
               <p>
                 My Post
@@ -106,7 +106,11 @@
                         <td><?= $post['kategori']; ?></td>
                         <td>
                           <a href="/admin/posts/edit/<?=$post['slug'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                          <a href="/admin/posts/delete/<?=$post['slug'];?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Trash</a>
+                          <form action="/admin/posts/<?=$post['slug'];?>" method="post" class="d-inline">
+                            <?= csrf_field(); ?>
+                            <input type="hidden" name="_method" value="DELTE">
+                            <button type="submit" class="btn btn-sm btn-danger me-1" onclick="return confirm('Apakah anda yakin menghapus Post ini?');"><i class="fas fa-trash"></i>Trash</a></button>
+                          </form>
                         </td>
                       </tr>
                       <?php endforeach ; ?>
